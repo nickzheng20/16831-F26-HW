@@ -154,12 +154,26 @@ class RL_Trainer(object):
     ####################################
 
     def collect_training_trajectories(self, itr, load_initial_expertdata, collect_policy, batch_size):
-        # TODO: get this from hw1
-        raise NotImplementedError
+        if itr == 0 and load_initial_expertdata is not None:
+            with open(load_initial_expertdata, 'rb') as f:
+                return pickle.load(f), 0, None
+
+        paths, envsteps_this_batch = utils.sample_trajectories(
+            self.env, collect_policy, batch_size, self.params['ep_len']
+        )
+        train_video_paths = None
+        if self.log_video:
+            train_video_paths = utils.sample_n_trajectories(
+                self.env, collect_policy, MAX_NVIDEO, MAX_VIDEO_LEN, render=True
+            )
+        return paths, envsteps_this_batch, train_video_paths
 
     def train_agent(self):
-        # TODO: get this from hw1
-        raise NotImplementedError
+        all_logs = []
+        for _ in range(self.params['num_agent_train_steps_per_iter']):
+            batch = self.agent.sample(self.params['train_batch_size'])
+            all_logs.append(self.agent.train(*batch))
+        return all_logs
 
     ####################################
     ####################################

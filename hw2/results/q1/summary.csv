@@ -1,0 +1,7 @@
+experiment,source_directory,iterations,last_iteration,final_eval_return,last20_mean_eval_return,last20_std_eval_return_across_iterations,best_eval_return,first_iteration_at_200,training_env_steps,elapsed_seconds
+q1_sb_no_rtg_dsa,q1_sb_no_rtg_dsa_CartPole-v0_27-09-2026_18-45-11,150,149,116.25,82.60472259521484,17.59837859799365,200.0,99,233596,146.03733825683594
+q1_sb_rtg_dsa,q1_sb_rtg_dsa_CartPole-v0_27-09-2026_18-47-40,150,149,200.0,200.0,0.0,200.0,12,238043,146.4153289794922
+q1_sb_rtg_na,q1_sb_rtg_na_CartPole-v0_27-09-2026_18-50-09,150,149,195.6666717529297,199.0,2.139574600989966,200.0,13,237633,142.9676513671875
+q1_lb_no_rtg_dsa,q1_lb_no_rtg_dsa_CartPole-v0_27-09-2026_18-52-34,150,149,200.0,197.2,6.059337265879511,200.0,21,910620,457.1890563964844
+q1_lb_rtg_dsa,q1_lb_rtg_dsa_CartPole-v0_27-09-2026_19-00-13,150,149,200.0,200.0,0.0,200.0,16,906264,457.9247741699219
+q1_lb_rtg_na,q1_lb_rtg_na_CartPole-v0_27-09-2026_19-07-52,150,149,200.0,200.0,0.0,200.0,9,906282,498.6009521484375
