@@ -1,0 +1,5 @@
+# Local development environment and generated Python files
+.conda/
+__pycache__/
+*.py[cod]
+*.egg-info/
