@@ -142,8 +142,6 @@ more trajectories and can reduce sampling noise, but require more environment st
 \subsubsection{Configurations -- \lbrack1 points\rbrack}
 \begin{answer}[title=Q5.2.1,height=10cm,width=\linewidth]
 \begin{minted}[framesep=2mm, fontsize=\scriptsize, breaklines]{bash}
-export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
-# All 15 new search configurations; seed 1 (default).
 for spec in "50 0.01" "50 0.02" "50 0.03" "50 0.04" "50 0.05" \
             "100 0.01" "100 0.02" "100 0.03" "100 0.04" "100 0.05" \
             "200 0.01" "200 0.02" "200 0.03" "200 0.1" "500 0.05"; do
@@ -208,8 +206,6 @@ python -m rob831.scripts.run_hw2 \
 \subsubsection{Configurations}
 \begin{answer}[title=Q7.2.1,height=10cm,width=\linewidth]
 \begin{minted}[framesep=2mm, fontsize=\scriptsize, breaklines]{bash}
-# CPU runs, seed 1 (default); one thread per process.
-export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 for b in 10000 30000 50000; do
   for r in 0.005 0.01 0.02; do
     python -m rob831.scripts.run_hw2 --env_name HalfCheetah-v4 \
