@@ -1,0 +1,2 @@
+source_directory,iterations,final_eval_return,last10_mean_eval_return,best_eval_return
+q3_b10000_r0.005_LunarLanderContinuous-v2_27-09-2026_20-23-37,100,121.18272399902344,125.5302963256836,254.90887451171875

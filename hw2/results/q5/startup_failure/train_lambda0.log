@@ -1,0 +1,92 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+########################
+logging outputs to  /home/nick12138/projects/16831-F26-HW/hw2/rob831/scripts/../../data/q5_b2000_r0.001_lambda0_Hopper-v4_29-09-2026_11-12-04
+########################
+GPU not detected. Defaulting to CPU.
+/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/Cython/Distutils/old_build_ext.py:15: DeprecationWarning: dep_util is Deprecated. Use functions from setuptools instead.
+  from distutils.dep_util import newer, newer_group
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+Import error. Trying to rebuild mujoco_py.
+/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/gl/osmesashim.c:1:10: fatal error: GL/osmesa.h: No such file or directory
+    1 | #include <GL/osmesa.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+Traceback (most recent call last):
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py", line 188, in _compile
+    self.spawn(compiler_so + cc_args + [src, '-o', obj] + extra_postargs)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py", line 1041, in spawn
+    spawn(cmd, dry_run=self.dry_run, **kwargs)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/spawn.py", line 68, in spawn
+    raise DistutilsExecError(f"command {cmd!r} failed with exit code {exitcode}")
+distutils.errors.DistutilsExecError: command '/usr/bin/gcc' failed with exit code 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nick12138/projects/16831-F26-HW/hw2/rob831/scripts/run_hw2.py", line 121, in <module>
+    main()
+  File "/home/nick12138/projects/16831-F26-HW/hw2/rob831/scripts/run_hw2.py", line 116, in main
+    trainer = PG_Trainer(params)
+  File "/home/nick12138/projects/16831-F26-HW/hw2/rob831/scripts/run_hw2.py", line 44, in __init__
+    self.rl_trainer = RL_Trainer(self.params)
+  File "/home/nick12138/projects/16831-F26-HW/hw2/rob831/infrastructure/rl_trainer.py", line 48, in __init__
+    self.env = gym.make(self.params['env_name'])
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/gym/envs/registration.py", line 619, in make
+    env_creator = load(spec_.entry_point)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/gym/envs/registration.py", line 62, in load
+    mod = importlib.import_module(mod_name)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/gym/envs/mujoco/__init__.py", line 1, in <module>
+    from gym.envs.mujoco.mujoco_env import MujocoEnv, MuJocoPyEnv  # isort:skip
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/gym/envs/mujoco/mujoco_env.py", line 16, in <module>
+    import mujoco_py
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/__init__.py", line 15, in <module>
+    from mujoco_py.builder import cymj, ignore_mujoco_warnings, functions, MujocoException
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/builder.py", line 499, in <module>
+    cymj = load_cython_ext(mujoco_path)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/builder.py", line 105, in load_cython_ext
+    cext_so_path = builder.build()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/builder.py", line 221, in build
+    built_so_file_path = self._build_impl()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/builder.py", line 273, in _build_impl
+    so_file_path = super()._build_impl()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/builder.py", line 244, in _build_impl
+    dist.run_commands()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+    self.run_command(cmd)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/dist.py", line 967, in run_command
+    super().run_command(command)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/Cython/Distutils/old_build_ext.py", line 186, in run
+    _build_ext.build_ext.run(self)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 359, in run
+    self.build_extensions()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/mujoco_py/builder.py", line 144, in build_extensions
+    build_ext.build_extensions(self)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/Cython/Distutils/old_build_ext.py", line 195, in build_extensions
+    _build_ext.build_ext.build_extensions(self)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 479, in build_extensions
+    self._build_extensions_serial()
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 505, in _build_extensions_serial
+    self.build_extension(ext)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 560, in build_extension
+    objects = self.compiler.compile(
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/ccompiler.py", line 600, in compile
+    self._compile(obj, src, ext, cc_args, extra_postargs, pp_opts)
+  File "/home/nick12138/projects/16831-F26-HW/.conda/rob831/lib/python3.10/site-packages/setuptools/_distutils/unixccompiler.py", line 190, in _compile
+    raise CompileError(msg)
+distutils.errors.CompileError: command '/usr/bin/gcc' failed with exit code 1

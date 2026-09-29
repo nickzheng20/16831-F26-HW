@@ -1,0 +1,19 @@
+{
+  "command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 ../.conda/rob831/bin/python -m rob831.scripts.run_hw2 --env_name InvertedPendulum-v4 --ep_len 1000 --discount 0.92 -n 100 -l 2 -s 64 -b 100 -lr 0.02 -rtg --no_gpu --exp_name q2_b100_r0.02",
+  "activation": [
+    "source /home/nick12138/anaconda3/etc/profile.d/conda.sh",
+    "conda activate /home/nick12138/projects/16831-F26-HW/.conda/rob831"
+  ],
+  "seed": 1,
+  "seed_is_cli_default": true,
+  "eval_batch_size": 400,
+  "eval_batch_size_is_cli_default": true,
+  "no_gpu": true,
+  "environment_threads": {
+    "OMP_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  },
+  "scalar_log_freq": 1,
+  "video_log_freq": -1
+}

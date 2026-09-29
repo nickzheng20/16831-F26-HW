@@ -1,0 +1,11 @@
+{
+  "experiment": "q4_search_b10000_lr0.02_rtg_nnbaseline",
+  "source_directory": "q4_search_b10000_lr0.02_rtg_nnbaseline_HalfCheetah-v4_29-09-2026_11-14-04",
+  "batch_size": 10000,
+  "learning_rate": 0.02,
+  "iterations": 100,
+  "final_eval_return": 161.28770446777344,
+  "last10_mean_eval_return": 155.60491180419922,
+  "best_eval_return": 210.9046173095703,
+  "selection_rule": "Highest mean evaluation return over the last 10 training iterations among the 9 grid configurations."
+}

@@ -1,4 +1,29 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:conda",
     "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-minted",
+            "command": "latexmk",
+            "args": [
+                "-cd",
+                "-pdf",
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (minted)",
+            "tools": [
+                "latexmk-minted"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "first"
 }

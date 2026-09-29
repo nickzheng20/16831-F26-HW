@@ -1,0 +1,11 @@
+{
+  "run_directory": "q2_b100_r0.03_InvertedPendulum-v4_29-09-2026_11-15-02",
+  "batch_size": 100,
+  "learning_rate": 0.03,
+  "seed": 1,
+  "first_1000_iteration": 65,
+  "final_eval_return": 1000.0,
+  "last10_mean_eval_return": 1000.0,
+  "selection_rule": "Among tested runs that reach 1000 before iteration 100 and have a final-10 mean return of at least 900, minimize batch size, then maximize learning rate. This stability filter is an additional reporting preference, not an assignment requirement.",
+  "scope": "17 complete runs total: 15 new CPU runs and 2 pre-existing runs; not an exhaustive search or a global optimum claim."
+}

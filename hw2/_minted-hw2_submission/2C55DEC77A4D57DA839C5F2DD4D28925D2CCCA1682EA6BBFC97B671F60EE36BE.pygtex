@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} CPU runs, seed 1 (default); one thread per process.}
+\PYG{n+nb}{export}\PYG{+w}{ }\PYG{n+nv}{OMP\PYGZus{}NUM\PYGZus{}THREADS}\PYG{o}{=}\PYG{l+m}{1}\PYG{+w}{ }\PYG{n+nv}{MKL\PYGZus{}NUM\PYGZus{}THREADS}\PYG{o}{=}\PYG{l+m}{1}\PYG{+w}{ }\PYG{n+nv}{OPENBLAS\PYGZus{}NUM\PYGZus{}THREADS}\PYG{o}{=}\PYG{l+m}{1}
+\PYG{k}{for}\PYG{+w}{ }b\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{l+m}{10000}\PYG{+w}{ }\PYG{l+m}{30000}\PYG{+w}{ }\PYG{l+m}{50000}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{do}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }r\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{l+m}{0}.005\PYG{+w}{ }\PYG{l+m}{0}.01\PYG{+w}{ }\PYG{l+m}{0}.02\PYG{p}{;}\PYG{+w}{ }\PYG{k}{do}
+\PYG{+w}{    }python\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }rob831.scripts.run\PYGZus{}hw2\PYG{+w}{ }\PYGZhy{}\PYGZhy{}env\PYGZus{}name\PYG{+w}{ }HalfCheetah\PYGZhy{}v4\PYG{+w}{ }\PYG{l+s+se}{\PYGZbs{}}
+\PYG{+w}{      }\PYGZhy{}\PYGZhy{}ep\PYGZus{}len\PYG{+w}{ }\PYG{l+m}{150}\PYG{+w}{ }\PYGZhy{}\PYGZhy{}discount\PYG{+w}{ }\PYG{l+m}{0}.95\PYG{+w}{ }\PYGZhy{}n\PYG{+w}{ }\PYG{l+m}{100}\PYG{+w}{ }\PYGZhy{}l\PYG{+w}{ }\PYG{l+m}{2}\PYG{+w}{ }\PYGZhy{}s\PYG{+w}{ }\PYG{l+m}{32}\PYG{+w}{ }\PYG{l+s+se}{\PYGZbs{}}
+\PYG{+w}{      }\PYGZhy{}b\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}b}\PYG{l+s+s2}{\PYGZdq{}}\PYG{+w}{ }\PYGZhy{}lr\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}r}\PYG{l+s+s2}{\PYGZdq{}}\PYG{+w}{ }\PYGZhy{}rtg\PYG{+w}{ }\PYGZhy{}\PYGZhy{}nn\PYGZus{}baseline\PYG{+w}{ }\PYGZhy{}\PYGZhy{}no\PYGZus{}gpu\PYG{+w}{ }\PYG{l+s+se}{\PYGZbs{}}
+\PYG{+w}{      }\PYGZhy{}\PYGZhy{}exp\PYGZus{}name\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}q4\PYGZus{}search\PYGZus{}b}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{b}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZus{}lr}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{r}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZus{}rtg\PYGZus{}nnbaseline\PYGZdq{}}
+\PYG{+w}{  }\PYG{k}{done}
+\PYG{k}{done}
+\end{Verbatim}

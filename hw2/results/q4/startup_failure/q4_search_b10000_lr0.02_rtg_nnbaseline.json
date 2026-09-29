@@ -1,0 +1,15 @@
+{
+  "command": "/home/nick12138/projects/16831-F26-HW/.conda/rob831/bin/python3.10 -m rob831.scripts.run_hw2 --env_name HalfCheetah-v4 --ep_len 150 --discount 0.95 -n 100 -l 2 -s 32 -b 10000 -lr 0.02 -rtg --nn_baseline --no_gpu --exp_name q4_search_b10000_lr0.02_rtg_nnbaseline",
+  "batch": 10000,
+  "learning_rate": 0.02,
+  "seed": 1,
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "started_at": 1790694731.013393,
+  "returncode": 1,
+  "finished_at": 1790694796.612377,
+  "run_directory": "data/q4_search_b10000_lr0.02_rtg_nnbaseline_HalfCheetah-v4_29-09-2026_11-12-11"
+}
